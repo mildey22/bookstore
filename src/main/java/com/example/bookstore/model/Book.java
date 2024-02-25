@@ -1,12 +1,16 @@
 package com.example.bookstore.model;
 
-import javax.persistance.Entity;
-import javax.persistance.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 
 @Entity
 public class Book {
 
-
+@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
 private long id;
 private String title;
 private String author;
@@ -14,8 +18,10 @@ private int year;
 private String isbn;
 private double price;
 
+protected Book() {}
+
     public Book(long id, String title, String author, int year, String isbn, double price) {
-        this.id = id;
+        super();
         this.title = title;
         this.author = author;
         this.year = year;
