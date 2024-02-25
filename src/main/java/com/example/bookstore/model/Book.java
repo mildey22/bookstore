@@ -1,9 +1,12 @@
 package com.example.bookstore.model;
 
+import org.apache.poi.ss.formula.functions.Columns;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 
 
 @Entity
@@ -14,13 +17,14 @@ public class Book {
 private long id;
 private String title;
 private String author;
+@Column(name="publishing_year")
 private int year;
 private String isbn;
 private double price;
 
 protected Book() {}
 
-    public Book(long id, String title, String author, int year, String isbn, double price) {
+    public Book(String title, String author, int year, String isbn, double price) {
         super();
         this.title = title;
         this.author = author;
