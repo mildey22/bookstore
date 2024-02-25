@@ -1,7 +1,5 @@
 package com.example.bookstore.model;
 
-import org.apache.poi.ss.formula.functions.Columns;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
