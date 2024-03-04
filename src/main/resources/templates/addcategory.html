@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Bookstore</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add a category</h1>
+        <div class="col-md-4">
+            <form th:object="${category}" th:action="@{savecategory}" action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" th:field="*{name}" class="form-control" />
+                <div style="clear: both; display: block; height: 10px;"></div>
+                <input type="submit" class="btn btn-primary" value="Save"></input>
+            </form>
+        </div>
+    </div>
+    <div><a th:href="@{/booklist}">Back</a></div>
+</body>
+
+</html>

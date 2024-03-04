@@ -29,6 +29,7 @@ public Book() {}
         this.year = year;
         this.isbn = isbn;
         this.price = price;
+        this.category = category;
     }
 
 
@@ -98,6 +99,7 @@ public Book() {}
             ", year='" + getYear() + "'" +
             ", isbn='" + getIsbn() + "'" +
             ", price='" + getPrice() + "'" +
+            ", category='" + getCategory() + "'" +
             "}";
     }
 
