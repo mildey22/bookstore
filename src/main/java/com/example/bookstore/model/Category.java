@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Category {
 
@@ -12,6 +14,7 @@ public class Category {
 private long categoryId;
 private String name;
 
+@JsonIgnore
 @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
 private List<Book> books;
 
