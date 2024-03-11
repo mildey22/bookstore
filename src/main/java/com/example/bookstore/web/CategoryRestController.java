@@ -25,17 +25,17 @@ public class CategoryRestController {
 	@Autowired
 	private CategoryRepository repository; 
 	
-    @RequestMapping(value="/categorys", method = RequestMethod.GET)
-    public @ResponseBody List<Category> getCategorysRest() {	
+    @RequestMapping(value="/categories", method = RequestMethod.GET)
+    public @ResponseBody List<Category> getCategoriesRest() {	
         return (List<Category>) repository.findAll();
     }    
 
-    @RequestMapping(value="/categorys/{id}", method = RequestMethod.GET)
+    @RequestMapping(value="/categories/{id}", method = RequestMethod.GET)
     public @ResponseBody Optional<Category> findCategoryRest(@PathVariable("id") Long cId) {	
     	return repository.findById(cId);
     } 
     
-    @RequestMapping(value="/categorys", method = RequestMethod.POST)
+    @RequestMapping(value="/categories", method = RequestMethod.POST)
     public @ResponseBody Category saveBookRest(@RequestBody Category category) {	
     	return repository.save(category);
     }
